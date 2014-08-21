@@ -44,8 +44,3 @@ for href in image_hrefs:
 	# This length is incorrect
 	print "[" + str(filename_prefix) + "/" + str(len(image_hrefs)).rjust(3, '0') + "] - SAVED" 
 	filename += 1
-	
-	
-# print "The board is " + "/" + str(board) + "/"
-# print "The thread is: " + str(thread)
-# print thread_url
