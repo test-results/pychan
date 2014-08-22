@@ -2,6 +2,9 @@
 
 pychan is a Python script to automatically download all of the full-resolution images from a 4chan thread.
 
+##Features
+* Saves all files including images (.jpg, .gif, .png) and video formats (.webm)
+
 ##Usage
 1. Run the script with the following arguments:
 `python pychan.py board thread`
