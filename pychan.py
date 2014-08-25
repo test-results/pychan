@@ -30,8 +30,9 @@ print "Subject:\t" + str(thread_title.string)
 # Get all of the HTML a tags with class="fileThumb", get the href tag
 image_hrefs = div_thread.find_all('a', {'class':'fileThumb'})
 
-# Create folder based on the thread_id
-if not os.path.exists(thread): os.makedirs(thread)
+# Create folder based on the board and thread_id
+save_directory = board + "\\" + thread
+if not os.path.exists(save_directory): os.makedirs(save_directory)
 
 # For each HTML a tag with class="fileThumb", get the href tag
 for href in image_hrefs:
@@ -42,7 +43,7 @@ for href in image_hrefs:
 	# Get the original filename by splitting URL at '/' and getting the last segment
 	# of it with [-1]
 	filename_suffix = image_url.split('/')
-	save_filename = str(thread) + str('\\') + str(filename_prefix) + '-' + filename_suffix[-1]
+	save_filename = str(save_directory) + str('\\') + str(filename_prefix) + '_' + filename_suffix[-1]
 	urllib.urlretrieve(image_url, save_filename)
 	# Print that the image was saved
 	print "[" + str(filename_prefix) + "/" + str(len(image_hrefs)).rjust(3, '0') + "] - SAVED" 
