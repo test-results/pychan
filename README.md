@@ -6,6 +6,9 @@ pychan is a Python script to automatically download all of the full-resolution i
 * Saves all files including images (.jpg, .gif, .png) and video formats (.webm)
 * Organises images by `board`, `thread_id` and `thread_name`
 
+###Requirements
+You'll need `bs4` (Beautiful Soup 4) and `colorama` to run the script.
+
 ##Usage
 1. Run the script with the following arguments:
 `python pychan.py board thread`
